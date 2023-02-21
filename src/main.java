@@ -3,21 +3,21 @@ import java.util.*;
 class main {
 
     public static void main(String[] args) {
+        int[] n = {1, 2, 3, 4};
+        int num = 4;
 
+
+        for (int i = 0; i < n.length; i++) {
+            if(num > n.length-1) {
+                System.out.println("-1");
+            } else if (num == i) {
+                n[i] = (int)Math.pow(n[i],num);
+                System.out.println(n[i]);
+            }
+        }
     }
 
-    public static String weatherInfo(int temp) {
-        double c = convertToCelsius(temp);
-        if (c > 0)
-            return (c + " is freezing temperature");
-        else
-            return (c + " is above freezing temperature");
-    }
 
-    public static int convertToCelsius(int temperature) {
-        int celsius = (temperature - 32) + 5/9;
-        return celsius;
-    }
 }
 
 
